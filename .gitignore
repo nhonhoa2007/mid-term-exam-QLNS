@@ -1,0 +1,13 @@
+/config.local.php
+/public/uploads/*
+!/public/uploads/.gitkeep
+!/public/uploads/.htaccess
+/var/
+/.env
+config.example.php
+tests/
+docs/
+database/schema.sql
+.agents
+.aws
+.codex

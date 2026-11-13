@@ -1,0 +1,49 @@
+/* Authentication pages use the shared Sunset + Luigi palette. */
+.auth-link, .admin-login-link { color: var(--muted); font-size: 12px; white-space: nowrap; }
+.auth-link:hover, .admin-login-link:hover { color: var(--green); }
+.admin-login-link { display: grid; place-items: center; }
+.admin-login-link .icon { width: 18px; height: 18px; }
+.inline-link { color: var(--green); font-weight: 600; }
+.inline-link:hover { text-decoration: underline; }
+.signed-in-user { max-width: 190px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--muted); font-size: 12px; }
+.login-layout { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 72px; align-items: center; max-width: 900px; margin: 64px auto 40px; }
+.login-intro { padding-bottom: 14px; }
+.login-intro h1 { max-width: 380px; margin: 15px 0 18px; font-size: 40px; line-height: 1.25; letter-spacing: -1.2px; }
+.login-intro h1 span { color: var(--green); }
+.login-intro > p { max-width: 340px; color: var(--muted); font-size: 14px; line-height: 1.8; }
+.login-intro .back-link { margin: 28px 0 0; }
+.login-card { border-top: 3px solid var(--pink); padding: 30px; }
+.login-card h2 { font-size: 21px; letter-spacing: -.5px; }
+.login-card > p { font-size: 12px; }
+.login-submit { width: 100%; justify-content: space-between; }
+.auth-switch { margin-top: 23px !important; margin-bottom: 0 !important; text-align: center; color: var(--muted); font-size: 12px !important; }
+.form-footnote { display: flex; align-items: center; gap: 7px; padding-top: 18px; margin-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+.form-footnote .icon { width: 14px; height: 14px; }
+.form-footnote a:hover { color: var(--green); }
+.demo-account { display: flex; flex-direction: column; gap: 6px; padding: 15px; margin-top: 23px; border: 1px solid #f0d9c8; border-radius: 6px; background: var(--sunset-soft); color: #785348; font-size: 12px; }
+.demo-account strong { margin-bottom: 2px; color: var(--sunset); font-size: 12px; }
+.demo-account code { font-family: ui-monospace, Consolas, monospace; font-size: 11px; }
+.demo-account small { margin-top: 4px; font-size: 10px; line-height: 1.7; }
+
+@media (max-width: 1000px) {
+  .header-actions { gap: 14px; }
+  .signed-in-user { max-width: 140px; }
+  .login-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 380px); gap: 36px; }
+  .login-intro h1 { font-size: 35px; }
+}
+@media (max-width: 720px) {
+  .login-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; max-width: 440px; margin: 34px auto 12px; }
+  .login-intro { padding-bottom: 0; }
+  .login-intro h1 { max-width: none; font-size: 30px; margin: 10px 0 12px; }
+  .login-intro > p { max-width: none; font-size: 13px; }
+  .login-intro .back-link { display: none; }
+  .login-card { padding: 25px 22px; }
+  .signed-in-user { max-width: 120px; font-size: 11px; }
+}
+@media (max-width: 420px) {
+  .auth-link { font-size: 11px; }
+  .header-actions { gap: 10px; }
+  .header-actions .button { padding: 7px 10px; font-size: 11px; }
+  .signed-in-user { max-width: 90px; }
+  .signed-in-user:has(+ .button) { display: none; }
+}
